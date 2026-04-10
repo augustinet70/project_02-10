@@ -26,7 +26,14 @@ In this project, you need to
 2. solve for the velocities, $\dot{q}$ and accelerations, $\ddot{q}$
 3. visualize the motion of the system as the rigid bar goes through at least one full rotation
 """
+# ╔═╡ c1a2b3c4-d5e6-47f8-9123-abcdef123456
+md"""
+## Constraint Equations
 
+The constraint equations define the geometric conditions that must always be satisfied by the mechanism during motion. In this dual-slider system, each piston is restricted to move only along its assigned diagonal track. Because of this, the center of each piston cannot move freely in the plane, and its \(x\)- and \(y\)-coordinates must remain consistent with the equation of its track. In addition, the orientation of each piston is fixed by the direction of the guide track, so the piston angles remain constant throughout the motion.
+
+The rigid bar adds another important constraint because its length remains constant at all times. Since the air is pinned to the centers of the two pistons, the distance between those connection points cannot change. This means the positions of the pistons msut always match the current position and orientation of the rigid bar. Together, these geometric relationships form the constraint equations of the system. These equations reduce the number of independent coordinates and make it possible to solve for the positions, velocities, and accelerations of the bodies as the bar rotates.
+"""
 # ╔═╡ 0d9be664-d7c5-4084-add2-25e5418742d6
 
 
@@ -49,5 +56,6 @@ project_hash = "71853c6197a6a7f222db0f1978c7cb232b87c5ee"
 # ╔═╡ Cell order:
 # ╟─f17103ea-06bf-11f1-a2b0-79e68ed152eb
 # ╠═0d9be664-d7c5-4084-add2-25e5418742d6
+# ╟─c1a2b3c4-d5e6-47f8-9123-abcdef123456
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
